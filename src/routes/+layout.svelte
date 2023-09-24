@@ -30,6 +30,7 @@
         FaceGrinSolid
     } from 'flowbite-svelte-icons';
     import {page} from '$app/stores';
+    import logo from '$lib/assets/util/logo-iestp-motupe.png';
 
     $: activeUrl = $page.url.pathname;
 </script>
@@ -44,12 +45,12 @@
         </p>
     </Banner>
     <NavBrand href="/">
-        <img alt="Logo IESTP Motupe" src="https://www.iestpmotupe.edu.pe/wp-content/uploads/2022/08/Logo-150x150.jpg"
+        <img alt="Logo IESTP Motupe" src={logo}
              class="mr-3 h-6 sm:h-9"/>
         <span class="self-center whitespace-nowrap text-xl font-semibold dark:text-white">IESTP Motupe</span>
     </NavBrand>
     <div class="flex md:order-2">
-        <Button size="sm" color="blue">Campus Virtual</Button>
+        <Button size="sm" color="blue" href="https://campus.iestpmotupe.edu.pe/">Campus Virtual</Button>
         <NavHamburger on:click={toggle}/>
     </div>
     <NavUl {hidden} {activeUrl} class="order-1">
@@ -65,7 +66,8 @@
             <DropdownDivider/>
             <DropdownItem href="/carreras/gestion-administrativa">Gestión Administrativa</DropdownItem>
             <DropdownDivider/>
-            <DropdownItem href="/carreras/produccion-agropecuaria">Producción Agropecuaria</DropdownItem> <DropdownDivider/>
+            <DropdownItem href="/carreras/produccion-agropecuaria">Producción Agropecuaria</DropdownItem>
+            <DropdownDivider/>
         </Dropdown>
 
         <NavLi class="cursor-pointer">
@@ -97,13 +99,12 @@
 <ImagePlaceholder class="m-5"/>
 <ImagePlaceholder class="m-5"/>
 <ImagePlaceholder class="m-5"/>
-<ImagePlaceholder class="m-5"/>
 
 <Footer footerType="socialmedia" class="bg-slate-200">
     <div class="md:flex md:justify-between">
         <div class="mb-6 md:mb-0">
             <FooterBrand href="/" alt="Logo IESTP Motupe"
-                         src="https://www.iestpmotupe.edu.pe/wp-content/uploads/2022/08/Logo-150x150.jpg"
+                         src={logo}
                          name="IESTP Motupe"/>
         </div>
         <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">

@@ -1,3 +1,1 @@
-<h1  class="text-3xl text-center m-3 p-3">
-    Enfermería Técnica
-</h1>
+<h1 class="text-3xl text-center p-4 m-4 font-bold text-gray-600">Enfermería Técnica</h1>
