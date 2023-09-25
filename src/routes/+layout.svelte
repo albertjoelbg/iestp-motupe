@@ -108,9 +108,9 @@
 </div>
 
 
-<ImagePlaceholder class="m-5"/>
-<ImagePlaceholder class="m-5"/>
-<Footer footerType="socialmedia" class="bg-slate-200">
+<ImagePlaceholder class="my-10 p-5"/>
+<ImagePlaceholder class="my-10 p-5"/>
+<Footer footerType="socialmedia" class="bg-slate-200 mt-10">
     <div class="md:flex md:justify-between">
         <div class="mb-6 md:mb-0">
             <FooterBrand href="/" alt="Logo IESTP Motupe"
@@ -141,10 +141,10 @@
             </div>
         </div>
     </div>
-    <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8"/>
+    <hr class="p-4 my-8 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8"/>
     <div class="sm:flex sm:items-center sm:justify-between">
         <FooterCopyright href="/" by="Instituto de Educación Superior Tecnológico Público Motupe"/>
-        <div class="flex mt-4 space-x-6 sm:justify-center sm:mt-0">
+        <div class="flex space-x-6 sm:justify-center sm:mt-0">
             <FooterIcon href="/">
                 <FacebookSolid
                         class="w-4 h-4 text-gray-500 dark:text-gray-500 hover:text-gray-900 dark:hover:text-white"/>
