@@ -27,7 +27,7 @@
         TwitterSolid
     } from 'flowbite-svelte-icons';
     import {page} from '$app/stores';
-    import logo from '$lib/assets/util/logo-iestp-motupe.png';
+    import logo from '$lib/assets/logos/logo-iestp-motupe.png';
 
     $: activeUrl = $page.url.pathname;
 </script>
@@ -64,6 +64,10 @@
             <ChevronDownOutline class="w-3 h-3 ml-2 text-primary-800 dark:text-white inline"/>
         </NavLi>
         <Dropdown class="w-44 z-20">
+            <DropdownItem href="/carreras/produccion-agropecuaria" on:click={hidden?hidden:toggle}>Producción
+                Agropecuaria
+            </DropdownItem>
+            <DropdownDivider/>
             <DropdownItem href="/carreras/apsti" on:click={hidden?hidden:toggle}>Arquitectura de Plataformas y Servicios
                 TI
             </DropdownItem>
@@ -73,11 +77,6 @@
             <DropdownDivider/>
             <DropdownItem href="/carreras/gestion-administrativa" on:click={hidden?hidden:toggle}>Gestión Administrativa
             </DropdownItem>
-            <DropdownDivider/>
-            <DropdownItem href="/carreras/produccion-agropecuaria" on:click={hidden?hidden:toggle}>Producción
-                Agropecuaria
-            </DropdownItem>
-            <DropdownDivider/>
         </Dropdown>
 
         <NavLi class="cursor-pointer">
