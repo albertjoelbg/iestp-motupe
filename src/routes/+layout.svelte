@@ -107,7 +107,6 @@
     <slot/>
 </div>
 
-
 <ImagePlaceholder class="my-10 p-5"/>
 <ImagePlaceholder class="my-10 p-5"/>
 <Footer footerType="socialmedia" class="bg-slate-200 mt-10">
