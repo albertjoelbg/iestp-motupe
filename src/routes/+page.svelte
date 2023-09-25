@@ -1,14 +1,21 @@
 <script>
-    import {Carousel, Gallery} from 'flowbite-svelte';
+    import {Breadcrumb, BreadcrumbItem, Carousel, Gallery, Heading, P, Span} from 'flowbite-svelte';
     import {images, desfile, reinado, aniversario} from './+server.js';
 
     let index = 0;
     let image;
 
 </script>
-<h1 id="titulo" class="text-3xl text-center p-4 m-4 font-bold text-gray-600">Instituto de Educación Superior Tecnológico
-    Público Motupe</h1>
-<div>
+<Breadcrumb aria-label="Default breadcrumb example" class="mx-2 pt-2 px-2">
+    <BreadcrumbItem href="/" home>Home</BreadcrumbItem>
+    <BreadcrumbItem href="#"></BreadcrumbItem>
+</Breadcrumb>
+
+<Heading tag="h1" class="mb-4 p-3" customSize="text-2xl font-bold  md:text-5xl lg:text-5xl text-center">
+    <Span gradient>Instituto de Educación Superior Tecnológico
+    Público Motupe</Span>
+</Heading>
+<div class="overflow-hidden w-full">
     <Carousel {images} let:Indicators on:change={({ detail }) => (image = detail)} duration="4000">
         <Indicators/>
     </Carousel>

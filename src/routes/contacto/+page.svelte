@@ -1,8 +1,12 @@
 <script>
-    import {Card, Button} from 'flowbite-svelte';
+    import {Card, Button, Breadcrumb, BreadcrumbItem} from 'flowbite-svelte';
     import {PhoneSolid, MessagesSolid, MapLocationOutline, FacebookSolid} from 'flowbite-svelte-icons';
 </script>
-
+<Breadcrumb aria-label="Default breadcrumb example" class="m-2 p-2">
+    <BreadcrumbItem href="/" home>Home</BreadcrumbItem>
+    <BreadcrumbItem href="#">Contacto</BreadcrumbItem>
+    <BreadcrumbItem href="#"></BreadcrumbItem>
+</Breadcrumb>
 <h1 class="text-3xl text-center p-4 m-4 font-bold text-gray-600">Contacto</h1>
 
 <main class="flex justify-center items-center flex-wrap">

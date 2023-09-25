@@ -16,7 +16,6 @@
         FooterLink,
         FooterBrand,
         FooterIcon,
-        Banner,
         ImagePlaceholder
     } from 'flowbite-svelte';
 
@@ -25,48 +24,59 @@
         FacebookSolid,
         GithubSolid,
         DiscordSolid,
-        TwitterSolid,
-        BullhornSolid,
-        FaceGrinSolid
+        TwitterSolid
     } from 'flowbite-svelte-icons';
     import {page} from '$app/stores';
     import logo from '$lib/assets/util/logo-iestp-motupe.png';
 
     $: activeUrl = $page.url.pathname;
 </script>
-<Navbar let:hidden let:toggle class="bg-slate-200">
-    <Banner id="default-banner" position="relative">
-        <p class="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400">
-    <span class="inline-flex p-1 mr-3 bg-white-200 rounded-full dark:bg-gray-600">
-      <BullhornSolid class="w-3 h-3 text-yellow-300 dark:text-gray-400"/>
-      <span class="sr-only">Light bulb</span>
-    </span>
-            <span>New Landing Page!</span>
-        </p>
-    </Banner>
+
+<svelte:head>
+    <title>IEST Motupe</title>
+</svelte:head>
+
+<Navbar let:hidden let:toggle class="bg-slate-200 fixed z-10 top-0">
     <NavBrand href="/">
         <img alt="Logo IESTP Motupe" src={logo}
-             class="mr-3 h-6 sm:h-9"/>
-        <span class="self-center whitespace-nowrap text-xl font-semibold dark:text-white">IESTP Motupe</span>
+             class="mr-3 h-6 sm:h-9" on:click={hidden?hidden:toggle}/>
+        <span class="self-center whitespace-nowrap text-xl font-semibold dark:text-white"
+              on:click={hidden?hidden:toggle}>IESTP Motupe</span>
     </NavBrand>
-    <div class="flex md:order-2">
+    <div class="flex lg:order-2">
         <Button size="sm" color="blue" href="https://campus.iestpmotupe.edu.pe/">Campus Virtual</Button>
         <NavHamburger on:click={toggle}/>
     </div>
     <NavUl {hidden} {activeUrl} class="order-1">
-        <NavLi href="/nosotros">Nosotros</NavLi>
+        <NavLi class="cursor-pointer">
+            Nosotros
+            <ChevronDownOutline class="w-3 h-3 ml-2 text-primary-800 dark:text-white inline"/>
+        </NavLi>
+        <Dropdown class="w-44 z-20">
+            <DropdownItem href="/nosotros/presentacion" on:click={hidden?hidden:toggle}>Presentación</DropdownItem>
+            <DropdownDivider/>
+            <DropdownItem href="/nosotros/historia" on:click={hidden?hidden:toggle}>Historia</DropdownItem>
+            <DropdownDivider/>
+            <DropdownItem href="/nosotros/mision-vision" on:click={hidden?hidden:toggle}>Misión y Visión</DropdownItem>
+        </Dropdown>
         <NavLi class="cursor-pointer">
             Carreras
             <ChevronDownOutline class="w-3 h-3 ml-2 text-primary-800 dark:text-white inline"/>
         </NavLi>
         <Dropdown class="w-44 z-20">
-            <DropdownItem href="/carreras/apsti">Arquitectura de Plataformas de TI</DropdownItem>
+            <DropdownItem href="/carreras/apsti" on:click={hidden?hidden:toggle}>Arquitectura de Plataformas y Servicios
+                TI
+            </DropdownItem>
             <DropdownDivider/>
-            <DropdownItem href="/carreras/enfermeria-tecnica">Enfermería Técnica</DropdownItem>
+            <DropdownItem href="/carreras/enfermeria-tecnica" on:click={hidden?hidden:toggle}>Enfermería Técnica
+            </DropdownItem>
             <DropdownDivider/>
-            <DropdownItem href="/carreras/gestion-administrativa">Gestión Administrativa</DropdownItem>
+            <DropdownItem href="/carreras/gestion-administrativa" on:click={hidden?hidden:toggle}>Gestión Administrativa
+            </DropdownItem>
             <DropdownDivider/>
-            <DropdownItem href="/carreras/produccion-agropecuaria">Producción Agropecuaria</DropdownItem>
+            <DropdownItem href="/carreras/produccion-agropecuaria" on:click={hidden?hidden:toggle}>Producción
+                Agropecuaria
+            </DropdownItem>
             <DropdownDivider/>
         </Dropdown>
 
@@ -75,26 +85,28 @@
             <ChevronDownOutline class="w-3 h-3 ml-2 text-primary-800 dark:text-white inline"/>
         </NavLi>
         <Dropdown class="w-44 z-20">
-            <DropdownItem href="/">Biblioteca Virtual</DropdownItem>
+            <DropdownItem href="/" on:click={hidden?hidden:toggle}>Biblioteca Virtual</DropdownItem>
             <DropdownDivider/>
-            <DropdownItem href="/">Campus Virtual</DropdownItem>
+            <DropdownItem href="/" on:click={hidden?hidden:toggle}>Campus Virtual</DropdownItem>
         </Dropdown>
         <NavLi class="cursor-pointer">
             Gestión Institucional
             <ChevronDownOutline class="w-3 h-3 ml-2 text-primary-800 dark:text-white inline"/>
         </NavLi>
         <Dropdown class="w-44 z-20">
-            <DropdownItem href="/">Formación Continua</DropdownItem>
+            <DropdownItem href="/" on:click={hidden?hidden:toggle}>Formación Continua</DropdownItem>
             <DropdownDivider/>
-            <DropdownItem href="/">Unidad Académica</DropdownItem>
+            <DropdownItem href="/" on:click={hidden?hidden:toggle}>Unidad Académica</DropdownItem>
             <DropdownDivider/>
-            <DropdownItem href="/">Bienestar y Empleabilidad</DropdownItem>
+            <DropdownItem href="/" on:click={hidden?hidden:toggle}>Bienestar y Empleabilidad</DropdownItem>
         </Dropdown>
-        <NavLi href="/contacto">Contacto</NavLi>
+        <NavLi href="/contacto" on:click={hidden?hidden:toggle}>Contacto</NavLi>
     </NavUl>
 </Navbar>
+<div class="mt-20 sm:mt-30 md:mt-40 lg:mt-20 md:pt-0">
+    <slot/>
+</div>
 
-<slot/>
 
 <ImagePlaceholder class="m-5"/>
 <ImagePlaceholder class="m-5"/>
