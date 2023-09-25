@@ -9,7 +9,7 @@
 </Breadcrumb>
 <h1 class="text-3xl text-center p-4 m-4 font-bold text-gray-600">Contacto</h1>
 
-<main class="flex justify-center items-center flex-wrap">
+<main class="flex justify-center items-center flex-wrap m-4 p-4">
     <Card class="m-4 flex justify-center items-center flex-auto">
         <h5 class="mb-2 text-2xl tracking-tight text-gray-900 dark:text-white">Whatsapp</h5>
         <Button class="w-fit bg-green-500 hover:bg-gray-600">

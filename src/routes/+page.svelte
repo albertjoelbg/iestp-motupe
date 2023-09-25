@@ -11,7 +11,7 @@
     <BreadcrumbItem href="#"></BreadcrumbItem>
 </Breadcrumb>
 
-<Heading tag="h1" class="mb-4 p-3" customSize="text-2xl font-bold  md:text-5xl lg:text-5xl text-center">
+<Heading tag="h1" class="mb-10 mt-3 p-4" customSize="text-2xl font-bold  md:text-5xl lg:text-5xl text-center">
     <Span gradient>Instituto de Educación Superior Tecnológico
     Público Motupe</Span>
 </Heading>
@@ -25,7 +25,7 @@
     </div>
 </div>
 
-<h2 class="text-2xl text-center p-4 m-4 font-bold text-gray-600">Recuerdos</h2>
+<h2 class="text-3xl text-center p-10 m-10 font-bold text-gray-600">Recuerdos</h2>
 
 <Gallery class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4">
     <Gallery items={desfile}/>

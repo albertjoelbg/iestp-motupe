@@ -110,8 +110,6 @@
 
 <ImagePlaceholder class="m-5"/>
 <ImagePlaceholder class="m-5"/>
-<ImagePlaceholder class="m-5"/>
-
 <Footer footerType="socialmedia" class="bg-slate-200">
     <div class="md:flex md:justify-between">
         <div class="mb-6 md:mb-0">
