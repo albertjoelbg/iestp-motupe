@@ -1,7 +1,6 @@
 <script>
     import "../app.postcss";
     import {
-        DarkMode,
         Navbar,
         NavBrand,
         NavLi,
@@ -21,7 +20,6 @@
     } from 'flowbite-svelte';
 
     import {
-        SunSolid, MoonSolid,
         ChevronDownOutline,
         FacebookSolid,
         GithubSolid,
@@ -48,14 +46,6 @@
     </NavBrand>
     <div class="flex lg:order-2">
         <Button size="sm" color="blue" href="https://campus.iestpmotupe.edu.pe/" class="mr-3">Campus Virtual</Button>
-        <DarkMode class="text-lg">
-            <svelte:fragment slot="lightIcon">
-                <SunSolid/>
-            </svelte:fragment>
-            <svelte:fragment slot="darkIcon">
-                <MoonSolid/>
-            </svelte:fragment>
-        </DarkMode>
         <NavHamburger on:click={toggle}/>
     </div>
     <NavUl {hidden} {activeUrl} class="order-1">
